@@ -1,13 +1,17 @@
 on:
-    push:
-      branches:
-        - master
-  
+  push:
+    branches:
+      - master
+
 jobs:
-    build:
-      runs-on: ubuntu-latest
-  
-      steps:
-        
-        - name: print something
-          uses: echo shahd
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Check out the repository
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # Run a custom shell command
+      - name: Print something
+        run: echo "shahd"
