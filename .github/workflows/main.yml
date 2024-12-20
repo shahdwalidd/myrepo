@@ -8,10 +8,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # Check out the repository
+      
       - name: Checkout code
         uses: actions/checkout@v3
 
-      # Run a custom shell command
+     
       - name: Print something
         run: echo "shahd"
+      - name: Print folder content
+        run: ls
+
